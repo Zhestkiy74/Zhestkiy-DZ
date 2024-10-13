@@ -1,0 +1,9 @@
+.array {
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+}
+.img{
+    max-width: 150px;
+    max-height: 150px;
+}

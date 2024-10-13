@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+use App\Http\Controllers\MainController;
+
+Route::get("/", [MainController::class, "showIndex"])->name("home");
+Route::get("/array", [MainController::class, "showArray"])->name("array");
