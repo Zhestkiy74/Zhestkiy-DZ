@@ -4,10 +4,10 @@
     <h1 class="text-2xl font-bold mb-4">Список отчетов</h1>
 
     @foreach($reports as $report)
-    <a href="/reports/{{$report['id']}}">
+    <a href="{{ route('report.update',$report) }}">
         <div class="mb-2 p-4 bg-gray-100 rounded-lg">
             <p>{{$report["number"]}}</p>
-            <p></p>{{$report["description"]}}</p>
+            <p>{{$report["description"]}}</p>
         </div>
         <form method="POST" action="{{route('reports.destroy', $report->id)}}">
             @method('delete')

@@ -38,7 +38,7 @@ class ReportController extends Controller
         $data = $request->validate([
             'description' => 'required|string|max:255',
         ]);
-        //$data['number']= uniqid();
+
         $report->update($data);
         return redirect()->back();
     }
